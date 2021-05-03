@@ -1,0 +1,11 @@
+<% flash.each do |type,msg| %>
+  <%= msg %><br>
+<% end %>
+<h1>Name: <%= @kitten.name %></h1>
+<h3>Age: <%= @kitten.age %></h3>
+<h3>Softness level: <%= @kitten.softness %></h3>
+<h3>Cuteness level: <%= @kitten.cuteness %></h3>
+
+<%= link_to ">>>Back to homepage",root_path %><br>
+<%= link_to "Edit kitten information", edit_kitten_path(@kitten) %><br>
+<%= link_to "Delete your kitten page", kitten_path(@kitten), method: :delete %>

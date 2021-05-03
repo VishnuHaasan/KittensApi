@@ -1,0 +1,5 @@
+<% flash.each do |type,msg| %>
+  <%= msg %><br>
+<% end %>
+<h1>Edit kitten information</h1>
+<%= render "form", local: {kitten: @kitten} %>

@@ -1,0 +1,8 @@
+<% flash.each do |type,msg| %>
+  <%= msg %><br>
+<% end %>
+<h1>Kittens</h1>
+<% @kittens.each do |kitten| %>
+  <%= link_to kitten.name, kitten_path(kitten) %>---><%= link_to "Delete your kitten page", kitten_path(kitten), method: :delete %><br>
+<% end %>
+<%= link_to "New kitten registration", new_kitten_path %>
